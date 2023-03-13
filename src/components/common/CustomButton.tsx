@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from "@pankod/refine-mui";
 
 import { CustomButtonProps } from "interfaces/common";
@@ -10,10 +11,12 @@ const CustomButton = ({
   fullWidth,
   icon,
   handleClick,
+  disabled,
 }: CustomButtonProps) => {
   return (
     <Button
-      type={type === 'submit' ? 'submit' : 'button' }
+      disabled={disabled}
+      type={type === "submit" ? "submit" : "button"}
       sx={{
         flex: fullWidth ? 1 : "unset",
         padding: "10px 15px",
@@ -25,11 +28,15 @@ const CustomButton = ({
         fontWeight: 600,
         gap: "10px",
         textTransform: "capitalize",
-        "&:hover": { opacity: 0.9, backgroundColor },
+        "&:hover": {
+          opacity: 0.9,
+          backgroundColor,
+        },
       }}
       onClick={handleClick}
     >
-      {icon} {title}
+      {icon}
+      {title}
     </Button>
   );
 };
