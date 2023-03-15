@@ -9,7 +9,7 @@ import { FieldValues, useForm } from "@pankod/refine-react-hook-form";
 import { useNavigate } from "@pankod/refine-react-router-v6";
 //Accesses navigate function and calls it with a route string or location object to navigate to desired location within application
 
-import Form from "components/common/Form";
+import Form from "../components/common/Form";
 
 const CreateProperty = () => {
   const { data: user } = useGetIdentity();

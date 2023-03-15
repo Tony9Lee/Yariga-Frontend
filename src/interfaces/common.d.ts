@@ -1,3 +1,7 @@
+import { CreateResponse, BaseRecord, UpdateResponse } from "@pankod/refine-core"
+import { FieldValues } from "@pankod/refine-react-hook-form"
+import { ReactNode, FormEventHandler } from "react"
+
 export interface CustomButtonProps {
     type?: string,
     title: string,
@@ -14,7 +18,7 @@ export interface ProfileProps {
     name: string,
     avatar: string,
     email: string,
-    properties: Array | undefined
+    properties: Array<any> | undefined
 }
 
 export interface PropertyProps {
@@ -32,7 +36,7 @@ export interface FormProps {
     register: any,
     onFinish: (values: FieldValues) => Promise<void | CreateResponse<BaseRecord> | UpdateResponse<BaseRecord>>,
     formLoading: boolean,
-    handleSubmit: FormEventHandler<HTMLFormElement> | undefined,
+    handleSubmit: FormEventHandler<HTMLFormElement>,
     handleImageChange: (file) => void,
     onFinishHandler: (data: FieldValues) => Promise<void> | void,
     propertyImage: { name: string, url: string },
