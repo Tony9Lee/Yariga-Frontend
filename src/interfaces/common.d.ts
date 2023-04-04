@@ -36,7 +36,7 @@ export interface FormProps {
     register: any,
     onFinish: (values: FieldValues) => Promise<void | CreateResponse<BaseRecord> | UpdateResponse<BaseRecord>>,
     formLoading: boolean,
-    handleSubmit: FormEventHandler<HTMLFormElement>,
+    handleSubmit: FormEventHandler<HTMLFormElement> | any;
     handleImageChange: (file) => void,
     onFinishHandler: (data: FieldValues) => Promise<void> | void,
     propertyImage: { name: string, url: string },
