@@ -12,10 +12,10 @@ import {
   Menu,
 } from "@pankod/refine-mui";
 import { useNavigate } from "@pankod/refine-react-router-v6";
+import React from "react";
 import { useMemo } from "react";
 
-import { PropertyCard, CustomButton } from "components";
-import { setFlagsFromString } from "v8";
+import { PropertyCard, CustomButton } from "../components";
 
 const AllProperties = () => {
   const navigate = useNavigate();
@@ -107,7 +107,7 @@ const AllProperties = () => {
                 color="info"
                 displayEmpty
                 required
-                inputProps={{ "aria-label": "label" }}
+                inputProps={{ "aria-label": "Without label" }}
                 defaultValue=""
                 value={currentFilterValues.propertyType}
                 onChange={(e) => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Refine, GitHubBanner, AuthProvider } from "@pankod/refine-core";
+import { Refine, AuthProvider } from "@pankod/refine-core";
 import {
   notificationProvider,
   RefineSnackbarProvider,
@@ -127,7 +127,6 @@ function App() {
 
   return (
     <>
-      <GitHubBanner />
       <ColorModeContextProvider>
         <CssBaseline />
         <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
