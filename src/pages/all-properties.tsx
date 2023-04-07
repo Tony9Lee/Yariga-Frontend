@@ -12,7 +12,6 @@ import {
 } from "@pankod/refine-mui";
 import { useNavigate } from "@pankod/refine-react-router-v6";
 //Accesses navigate function and calls it with a route string or location object to navigate to desired location within application
-import React from "react";
 import { useMemo } from "react";
 
 import { PropertyCard, CustomButton } from "../components";
@@ -54,7 +53,7 @@ const AllProperties = () => {
   }, [filters]);
 
   if (isLoading) return <Typography>Loading...</Typography>;
-  if (isError) return <Typography>Loading...</Typography>;
+  if (isError) return <Typography>Error...</Typography>;
 
   return (
     <Box>
