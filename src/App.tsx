@@ -19,11 +19,10 @@ import {
 } from "@mui/icons-material";
 
 import dataProvider from "@pankod/refine-simple-rest";
-import { MuiInferencer } from "@pankod/refine-inferencer/mui";
 import routerProvider from "@pankod/refine-react-router-v6";
 import axios, { AxiosRequestConfig } from "axios";
-import { ColorModeContextProvider } from "contexts";
-import { Title, Sider, Layout, Header } from "components/layout";
+import { ColorModeContextProvider } from "./contexts";
+import { Title, Sider, Layout, Header } from "./components/layout";
 
 import {
   Login,
@@ -35,10 +34,10 @@ import {
   CreateProperty,
   AgentProfile,
   EditProperty,
-} from "pages";
+} from "./pages";
 
-import { CredentialResponse } from "interfaces/google";
-import { parseJwt } from "utils/parse-jwt";
+import { CredentialResponse } from "./interfaces/google";
+import { parseJwt } from "./utils/parse-jwt";
 
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
@@ -73,20 +72,18 @@ function App() {
 
         const data = await response.json();
 
-        if(response.status === 200) {
-
+        if (response.status === 200) {
         }
-
         localStorage.setItem(
           "user",
           JSON.stringify({
             ...profileObj,
             avatar: profileObj.picture,
-            userid: data._id
+            userid: data._id,
           })
         );
       } else {
-        return Promise.reject()
+        return Promise.reject();
       }
       localStorage.setItem("token", `${credential}`);
 
