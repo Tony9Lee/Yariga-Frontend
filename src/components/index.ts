@@ -11,7 +11,6 @@ import TotalRevenue from './charts/TotalRevenue';
 import AgentCard from './agent/AgentCard';
 
 // home
-import TopAgent from './home/TopAgent';
 
 export {
   Profile,
@@ -24,5 +23,4 @@ export {
   
   AgentCard,
 
-  TopAgent,
 };
