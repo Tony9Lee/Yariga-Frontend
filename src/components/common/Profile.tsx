@@ -68,7 +68,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                   {name}
                 </Typography>
                 <Typography fontSize={16} color="#808191">
-                  Realestate Agent
+                  Real Estate Agent
                 </Typography>
               </Stack>
 
