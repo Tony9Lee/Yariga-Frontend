@@ -12,7 +12,7 @@ import {
   Star,
 } from "@mui/icons-material";
 
-import { CustomButton } from "components";
+import { CustomButton } from "../components";
 
 function checkImage(url: any) {
   const img = new Image();
@@ -254,6 +254,7 @@ const PropertyDetails = () => {
           <Stack>
             <img
               src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
+              alt =""
               width="100%"
               height={306}
               style={{ borderRadius: 10, objectFit: "cover" }}
