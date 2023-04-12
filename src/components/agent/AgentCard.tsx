@@ -19,13 +19,7 @@ const InfoBar = ({ icon, name }: InfoBarProps) => (
   </Stack>
 );
 
-const AgentCard = ({
-  id,
-  name,
-  email,
-  avatar,
-  noOfProperties,
-}: AgentCardProp) => {
+const AgentCard = ({ id, email, avatar, noOfProperties }: AgentCardProp) => {
   const { data: currentUser } = useGetIdentity();
 
   const generateLink = () => {
@@ -68,7 +62,7 @@ const AgentCard = ({
       >
         <Stack gap={2} direction="row" flexWrap="wrap" alignItems="center">
           <Typography fontSize={22} fontWeight={600} color="#11142d">
-            {name}
+            Jason B
           </Typography>
           <Typography fontSize={14} color="#808191">
             Real-Estate Agent
