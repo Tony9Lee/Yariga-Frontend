@@ -138,7 +138,7 @@ const PropertyDetails = () => {
                     ${propertyDetails.price}
                   </Typography>
                   <Typography fontSize={14} color="#808191" mb={0.5}>
-                    for one day
+                    Listed Price
                   </Typography>
                 </Stack>
               </Box>
@@ -194,9 +194,11 @@ const PropertyDetails = () => {
               />
 
               <Box mt="15px">
-                <Typography fontSize={18} fontWeight={600} color="#11142d">
-                  {propertyDetails.creator.name}
-                </Typography>
+                <Typography
+                  fontSize={18}
+                  fontWeight={600}
+                  color="#11142d"
+                ></Typography>
                 <Typography
                   mt="5px"
                   fontSize={14}
@@ -228,20 +230,20 @@ const PropertyDetails = () => {
             >
               <CustomButton
                 title={!isCurrentUser ? "Message" : "Edit"}
-                backgroundColor="#475be8"
-                color="#fcfcfc"
+                backgroundColor="#475BE8"
+                color="#FCFCFC"
                 fullWidth
                 icon={!isCurrentUser ? <ChatBubble /> : <Edit />}
                 handleClick={() => {
                   if (isCurrentUser) {
-                    navigate(`/properties/edit/$(propertyDetails._id)`);
+                    navigate(`/properties/edit/${propertyDetails._id}`);
                   }
                 }}
               />
               <CustomButton
                 title={!isCurrentUser ? "Call" : "Delete"}
-                backgroundColor={!isCurrentUser ? "#2ed480" : "#d42e2e"}
-                color="#fcfcfc"
+                backgroundColor={!isCurrentUser ? "#2ED480" : "#d42e2e"}
+                color="#FCFCFC"
                 fullWidth
                 icon={!isCurrentUser ? <Phone /> : <Delete />}
                 handleClick={() => {
@@ -254,7 +256,6 @@ const PropertyDetails = () => {
           <Stack>
             <img
               src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
-              alt =""
               width="100%"
               height={306}
               style={{ borderRadius: 10, objectFit: "cover" }}
@@ -264,8 +265,8 @@ const PropertyDetails = () => {
           <Box>
             <CustomButton
               title="Book Now"
-              backgroundColor="#475be8"
-              color="fcfcfc"
+              backgroundColor="#475BE8"
+              color="#FCFCFC"
               fullWidth
             />
           </Box>
