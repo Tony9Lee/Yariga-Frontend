@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { useGetIdentity } from "@pankod/refine-core";
-import { useForm } from "@refinedev/react-hook-form";
-import { FieldValues } from "react-hook-form";
+import { FieldValues, useForm } from "@pankod/refine-react-hook-form";
 import Form from "../components/common/Form";
 
-const CreateProperty = () => {
+const EditProperty = () => {
   const { data: user } = useGetIdentity();
-  console.log(user);
   const [propertyImage, setPropertyImage] = useState({ name: "", url: "" });
   const {
     refineCore: { onFinish, formLoading },
@@ -51,4 +49,4 @@ const CreateProperty = () => {
   );
 };
 
-export default CreateProperty;
+export default EditProperty;
