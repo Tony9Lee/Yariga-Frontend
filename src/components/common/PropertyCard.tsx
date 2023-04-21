@@ -19,6 +19,13 @@ const PropertyCard = ({
   price,
   photo,
 }: PropertyCardProps) => {
+  const commaInserter = (price: string) => {
+    const priceString = price.toString();
+    const parts = priceString.split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+  };
+
   return (
     <Card
       component={Link}
@@ -69,7 +76,7 @@ const PropertyCard = ({
           height="fit-content"
         >
           <Typography fontSize={12} fontWeight={600} color="#475be8">
-            ${price}
+            ${commaInserter(price)}
           </Typography>
         </Box>
       </CardContent>
