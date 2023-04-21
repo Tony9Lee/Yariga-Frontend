@@ -55,6 +55,13 @@ const PropertyDetails = () => {
     }
   };
 
+  const commaInserter = (price: string) => {
+    const priceString = price.toString();
+    const parts = priceString.split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+  };
+
   return (
     <Box
       borderRadius="15px"
@@ -135,7 +142,7 @@ const PropertyDetails = () => {
                 </Typography>
                 <Stack direction="row" alignItems="flex-end" gap={1}>
                   <Typography fontSize={25} fontWeight={700} color="#475be8">
-                    ${propertyDetails.price}
+                    ${commaInserter(propertyDetails.price)}
                   </Typography>
                   <Typography fontSize={14} color="#808191" mb={0.5}>
                     Listed Price
