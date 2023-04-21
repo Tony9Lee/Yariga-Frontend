@@ -10,7 +10,7 @@ export interface FormValues {
     description: string,
     propertyType: string,
     location: string,
-    price: number | string | undefined,
+    price: number | undefined,
 }
 
 export interface PropertyCardProps {
